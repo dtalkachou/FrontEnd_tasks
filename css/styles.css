@@ -1,125 +1,139 @@
 body {
-    margin: 0;
-    font-family: -apple-system, 'Inconsolata', Lato, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align:left;
-    color: #fff;
-    background-color: #131d26;
+	margin: 0;
+	font-family: -apple-system, 'Inconsolata', Lato, sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align:left;
+	color: #fff;
+	background-color: #131d26;
 }
 
 *, ::after, ::before {
    box-sizing: border-box;
 }
 
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+}
+
+.header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+}
+
 .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 15px;
-    background-color: #070b0f;
-    min-height: 56px;
-    line-height: 1;
-    margin-bottom: 10px;
-    align-items: center;
+	display: flex;
+	padding: 10px 15px;
+	background-color: #070b0f;
+	line-height: 1;
+	align-items: center;
+	min-height: 56px;
 }
 
 .navbar a {
-    color: #fff;
-    vertical-align: middle;
+	color: #fff;
 }
 
 .text-red {
-    color: #d9261c;
+	color: #d9261c;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-family: 'Hammersmith One', arial;
-    text-decoration-line: none;
-    line-height: inherit; 
-    text-transform: uppercase;
+	font-size: 1.5rem;
+	font-family: 'Hammersmith One', arial;
+	text-decoration-line: none;
+	line-height: inherit; 
+	text-transform: uppercase;
 }
 
 .container {
-    display: block;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content {
+	padding-top: 66px;
 }
 
 .card-list {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .card {
-    display: flex;
-    min-height: 100px;
-    border-radius: 10px;
-    background: linear-gradient(#3342a1, #003b79);
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	display: flex;
+	min-height: 100px;
+	border-radius: 10px;
+	background: linear-gradient(#3342a1, #003b79);
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .my-card {    
-    background: linear-gradient(#e21567, #d9261c);
+	background: linear-gradient(#e21567, #d9261c);
 }
 
 .card img.avatar {
-    box-sizing: content-box;
-    height: 55px;
-    width: 55px;
-    padding: 2px;
-    border: 3px solid rgba(255, 255, 255, 0.45);
-    border-radius: 50%;
+	box-sizing: content-box;
+	height: 55px;
+	width: 55px;
+	padding: 2px;
+	border: 3px solid rgba(255, 255, 255, 0.45);
+	border-radius: 50%;
 }
 
 .card__player-info {
-    line-height: 1.25rem;
-    flex-grow: 1;
+	line-height: 1.25rem;
+	flex-grow: 1;
 }
 
 .card__player-name {
-    font-size: 1.25rem;
-    font-weight: 500;
+	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 .card__player-money {
-    font-family: 'Hammersmith One', arial;
-    font-size: 1.25rem;
-    font-weight: 600;
+	font-family: 'Hammersmith One', arial;
+	font-size: 1.25rem;
+	font-weight: 600;
 }
 
 .card__player-money:before {
-    display: inline-flex;
-    content: '$';
-    opacity: .5;
-    margin-top: 3px;
-    margin-left: -2px;
-    transform: scale(.75);
+	display: inline-flex;
+	content: '$';
+	opacity: .5;
+	margin-top: 3px;
+	margin-left: -2px;
+	transform: scale(.75);
 }
 
 .card__player-money:after {
-    content: 'K';
-    opacity: .5;
-    font-size: 1rem;
-    margin-left: 2px;
+	content: 'K';
+	opacity: .5;
+	font-size: 1rem;
+	margin-left: 2px;
 }
 
 .card__transfer-btn {
-    width: 48px;
-    height: 48px;
-    background: transparent;
-    border: 4px solid #7e92ef;
-    border-radius: 14px;
-    color: #fff;
-    justify-content: flex-end;
+	width: 48px;
+	height: 48px;
+	background: transparent;
+	border: 4px solid #7e92ef;
+	border-radius: 14px;
+	color: #fff;
+	justify-content: flex-end;
 }
 
 .my-card .card__transfer-btn {
-    border-color: #ef7e7e!important;
+	border-color: #ef7e7e!important;
 }
