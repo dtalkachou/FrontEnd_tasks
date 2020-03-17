@@ -39,11 +39,11 @@ body {
 	color: #fff;
 }
 
-.text-red {
+.text_red {
 	color: #d9261c;
 }
 
-.navbar-brand {
+.navbar_brand {
 	font-size: 1.5rem;
 	font-family: 'Hammersmith One', arial;
 	text-decoration-line: none;
@@ -70,7 +70,7 @@ body {
 	}
 }
 
-.card-list {
+.card_list {
 	display: flex;
 	flex-direction: column;
 }
@@ -78,6 +78,7 @@ body {
 .card {
 	display: flex;
 	padding: 15px 20px;
+	margin-bottom: 15px;
 	min-height: 100px;
 	border-radius: 10px;
 	background: linear-gradient(#3342a1, #003b79);
@@ -86,36 +87,40 @@ body {
 	flex-wrap: wrap;
 }
 
-.my-card {    
+.my_card {    
 	background: linear-gradient(#e21567, #d9261c);
 }
 
-.card__player-avatar {
-	box-sizing: content-box;
-	height: 55px;
-	width: 55px;
+.avatar {
+	box-sizing: border-box;
 	padding: 2px;
-	border: 3px solid rgba(255, 255, 255, 0.45);
 	border-radius: 50%;
+	border: 3px solid rgba(255, 255, 255, 0.45);
 }
 
-.card__player-info {
+.card .avatar {
+	height: 65px;
+	width: 65px;
+}
+
+.card__player_info {
+	margin-left: 10px;
+	margin-right: 10px;
 	line-height: 1.25rem;
+	font-size: 1.25rem;
 	flex-grow: 1;
 }
 
-.card__player-name {
-	font-size: 1.25rem;
+.card__player_info .player_name {
 	font-weight: 500;
 }
 
-.card__player-money {
+.card__player_info .player_money {
 	font-family: 'Hammersmith One', arial;
-	font-size: 1.25rem;
 	font-weight: 600;
 }
 
-.card__player-money:before {
+.card .player_money:before {
 	display: inline-flex;
 	content: '$';
 	opacity: .5;
@@ -124,15 +129,15 @@ body {
 	transform: scale(.75);
 }
 
-.card__player-money:after {
+.card__player_info .player_money:after {
 	content: 'K';
 	opacity: .5;
 	font-size: 1rem;
 	margin-left: 2px;
 }
 
-.card__transfer-btn {
-	display: inline-flex;
+.card__transfer_btn {
+	display: flex;
 	width: 48px;
 	height: 48px;
 	background: transparent;
@@ -145,12 +150,12 @@ body {
 	font-size: 0;
 }
 
-.my-card .card__transfer-btn {
+.my_card .card__transfer_btn {
 	border-color: #ef7e7e!important;
 }
 
 @media (min-width: 768px) {
-	.card-list {
+	.card_list {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -160,50 +165,98 @@ body {
 	.card {
 		margin-right: 7.5px;
 		margin-left: 7.5px;
-		background: linear-gradient(135deg, #3342a1, #003b79);
+		margin-bottom: 0;
+		background: linear-gradient(145deg, #3342a1, #003b79);
 		border-radius: 20px;
 		flex-direction: column;
 		width: 225px;
-		justify-content: flex-start;
 	}
 
 	.card > * {
 		justify-content: center;
 	}
 
-	.my-card {    
-		background: linear-gradient(135deg, #e21567, #d9261c);
+	.my_card {
+		background: linear-gradient(145deg, #e21567, #d9261c);
 	}
 
-	.card__player-avatar {
-		height: 100px;
-		width: 100px;
+	.card .avatar {
+		height: 116px;
+		width: 116px;
 		border-width: 5px;
 		padding: 3px;
 	}
 
-	.card__player-info {
+	.card__player_info {
+		margin: 15px 0 10px;
 		text-align: center;
-		margin-top: 5px;
-		margin-bottom: 5px;
 		line-height: 2.5rem;
-		flex-grow: 0;
 	}
 
-	.card__player-name {
+	.card__player_info .player_name {
 		font-size: 1.75rem;
+		line-height: 1.25rem;
 	}
 
-	.card__player-money {
+	.card__player_info .player_money {
 		font-size: 2rem;
 	}
 
-	.card__player-money:after {
-		font-size: 1.5rem;
+	.card__player_info .player_money:after {
+		font-size: 1.33rem;
 	}
 
-	.card__transfer-btn {
+	.card__transfer_btn {
 		width: 100%;
-		font-size: 1.5rem;
+		font-size: 1.33rem;
+	}
+
+	.card__transfer_btn *:before {
+		margin-right: 5px;
+	}
+}
+
+.lobby_section__title {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+}
+
+.lobby_section__highlight {
+	color: #7e92ef;
+}
+
+.lobby_section__rect {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 10px;
+}
+
+.lobby_section__player {
+	margin-bottom: 15px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.lobby_section__rect .row:last-child > * {
+	margin-bottom: 0;
+}
+
+.lobby_section__player .avatar {
+	width: 100%;
+	max-width: 60px;
+	max-height: 60px;
+	border-color: rgba(255, 255, 255, 0.15);
+}
+
+.lobby_section__player .player_name {
+	font-size: 1rem;
+	overflow: hidden;
+}
+
+@media (min-width: 425px) {
+	.lobby_section__player .player_name {
+		font-size: 1.25rem;
 	}
 }

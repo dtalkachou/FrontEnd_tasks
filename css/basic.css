@@ -359,11 +359,11 @@
 .col-9,
 .col-10,
 .col-11,
-.col-12, {
-	position:relative;
-	width:100%;
-	padding-right:15px;
-	padding-left:15px
+.col-12 {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px
 }
 
 .col-1 {
@@ -423,4 +423,17 @@
 .col-12 {
 	flex: 0 0 100%;
 	max-width: 100%
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.justify-content-between {
+	justify-content:space-between;
+}
+
+.align-items-center {
+	align-items: center;
 }
