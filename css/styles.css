@@ -165,7 +165,6 @@ body {
 	.card {
 		margin-right: 7.5px;
 		margin-left: 7.5px;
-		margin-bottom: 0;
 		background: linear-gradient(145deg, #3342a1, #003b79);
 		border-radius: 20px;
 		flex-direction: column;
