@@ -1,0 +1,21 @@
+.ii {
+	display: inline-flex;
+}
+
+.ii-bank:before {
+	content: '';
+	height: 20px;
+	width: 20px;
+	background-size: 20px 20px;
+	background-image: url('../images/icons/bank.svg');
+}
+
+.ii-coins:before {
+	content: '';
+	height: 20px;
+	width: 20px;
+	background-size: 20px 20px;
+	content: '';
+	margin-top: 2px;
+	background-image: url('../images/icons/coins.svg');
+}
