@@ -22,6 +22,10 @@ button {
 	text-transform: uppercase;
 }
 
+figure, p {
+	margin: 0;
+}
+
 *, ::after, ::before {
    box-sizing: border-box;
 }
@@ -156,6 +160,7 @@ button {
 	border-radius: 14px;
 	color: #fff;
 	font-size: 0;
+	justify-content: center;
 }
 
 .card__transfer_btn:hover {
@@ -167,7 +172,7 @@ button {
 }
 
 .my_card .card__transfer_btn {
-	border-color: #ef7e7e!important;
+	border-color: #ef7e7e;
 }
 
 .my_card .card__transfer_btn:focus {
@@ -178,13 +183,13 @@ button {
 	.card_list {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-around;
 		flex-wrap: wrap;
 	}
 
 	.card {
-		margin-right: 7.5px;
-		margin-left: 7.5px;
+		margin-right: 5px;
+		margin-left: 5px;
 		background: linear-gradient(145deg, #3342a1, #003b79);
 		border-radius: 20px;
 		flex-direction: column;
@@ -307,13 +312,11 @@ button {
 }
 
 .lobby_section__player {
-	margin-bottom: 15px;
 	text-align: center;
-	margin-bottom: 15px;
 }
 
-.lobby_section__rect .row:last-child > * {
-	margin-bottom: 0;
+.lobby_section__rect .row:not(:last-child) {
+	margin-bottom: 15px;
 }
 
 .lobby_section__player .avatar {
