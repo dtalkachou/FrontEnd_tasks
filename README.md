@@ -17,6 +17,6 @@ Dzianis Talkachou, _group 753502_
 <!-- Attachments -->
 [game-page]: https://dtalkachou.github.io/FrontEnd_tasks/game.html
 [lobby-page]: https://dtalkachou.github.io/FrontEnd_tasks/lobby.html
-[project-requirements]: https://github.com/dtalkachou/ACS-FrontEnd_tasks/blob/master/REQUIREMENTS.md
+[project-requirements]: https://github.com/dtalkachou/FrontEnd_tasks/blob/9538a90624c724028388e3805a058a15c3216df6/README.md
 [telegram]: https://t.me/dtalkachou
 [download]: https://yadi.sk/d/fD7Bce8VB1tWUQ
